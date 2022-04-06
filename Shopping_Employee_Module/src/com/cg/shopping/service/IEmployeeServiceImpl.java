@@ -1,7 +1,7 @@
 package com.cg.shopping.service;
 
 import com.cg.shopping.entities.Employee;
-import com.cg.shopping.repository.EmployeeRepositoryImpl;
+import com.cg.shopping.repository.IEmployeeRepositoryImpl;
 import com.cg.shopping.repository.IEmployeeRepository;
 
 public class IEmployeeServiceImpl implements IEmployeeService
@@ -12,7 +12,7 @@ public class IEmployeeServiceImpl implements IEmployeeService
 	//constructor to connect interface of different package and implementation of different package 
 	public IEmployeeServiceImpl() 
 	{
-		dao= new EmployeeRepositoryImpl();
+		dao= new IEmployeeRepositoryImpl();
 	}
 
 	//Step-2: Service calls to perform CRUD operations

@@ -4,14 +4,14 @@ import javax.persistence.EntityManager;
 
 import com.cg.shopping.entities.Employee;
 
-public class EmployeeRepositoryImpl implements IEmployeeRepository
+public class IEmployeeRepositoryImpl implements IEmployeeRepository
 {
 	//Step-1: Start JPA LifeCycle
 	//create entity manager object, and import
 	private EntityManager entityManager;
 	
 	//create default constructor
-	public EmployeeRepositoryImpl() 
+	public IEmployeeRepositoryImpl() 
 	{
 		entityManager=JPAUtil.getEntityManager();	//call entitymanager from JPAUtil file
 	}
@@ -26,9 +26,7 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository
 		return employee;
 	}
 
-	
-
-	@Override
+@Override
 	public Employee updateEmployee(Employee employee)
 	{
 		entityManager.merge(employee);
